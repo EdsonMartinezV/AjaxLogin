@@ -54,6 +54,6 @@
         }
     })
 
-    xhr.open("GET", "https://jsonplaceholder.typicode.com/users")
+    xhr.open("GET", "/users")
     xhr.send();
 })();
