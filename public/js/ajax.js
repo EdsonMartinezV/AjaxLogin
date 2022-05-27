@@ -3,6 +3,7 @@
         $xhr = document.getElementById('xhr'),
         $emailInput = document.getElementById('emailInput'),
         $emailField = document.getElementById('emailField'),
+        $registerButton = document.getElementById('registerButton'),
         $fragment = document.createDocumentFragment(),
         $message = document.createElement('p');
 
@@ -33,6 +34,7 @@
                 if (item.email === e.target.value) {
                     $message.textContent = "Esta dirección de correo ya está registrada"
                     $emailField.appendChild($message)
+                    $registerButton.disabled = true
                 }
             })
         }

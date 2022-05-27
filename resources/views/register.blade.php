@@ -9,7 +9,8 @@
 </head>
 <body>
     <main>
-        <form>
+        <form action="/register" method="POST">
+            @csrf
             <h1>Ingresa tus datos</h1>
             <div id="emailField">
                 <input type="email" id="emailInput" autocomplete="username" placeholder="E-mail">
@@ -17,7 +18,7 @@
             <div>
                 <input type="password" id="passwordInput" autocomplete="current-password" placeholder="Contraseña">
             </div>
-            <input type="submit" value="Registrarse">
+            <input id="registerButton" type="submit" value="Registrarse">
         </form>
     </main><br>
     <h2>Direcciones ya registradas recuperadas con Ajax</h2>
