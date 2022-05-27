@@ -17,7 +17,7 @@
             <div>
                 <input type="password" id="passwordInput" autocomplete="current-password" placeholder="Contraseña">
             </div>
-            <button type="submit">Registrarse</button>
+            <input type="submit" value="Registrarse">
         </form>
     </main>
 

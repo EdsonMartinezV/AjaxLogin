@@ -6,6 +6,8 @@
         $fragment = document.createDocumentFragment(),
         $message = document.createElement('p');
 
+    $message.style.color = 'red'
+
     xhr.addEventListener("readystatechange", (e) => {
         if (xhr.readyState !== 4) return
         if (xhr.status >= 200 && xhr.status < 300) {
