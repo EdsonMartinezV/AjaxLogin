@@ -19,8 +19,7 @@
             </div>
             <input type="submit" value="Registrarse">
         </form>
-    </main>
-
+    </main><br>
     <h2>Direcciones ya registradas recuperadas con Ajax</h2>
     <ol id="xhr"></ol>
     <script src="{{ asset("js/ajax.js") }}"></script>
