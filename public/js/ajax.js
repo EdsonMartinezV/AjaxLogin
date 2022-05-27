@@ -30,7 +30,7 @@
         if (xhr.status >= 200 && xhr.status < 300) {
             const data = JSON.parse(xhr.responseText)
             data.forEach((item) => {
-                if (item.email === $emailInput.value) {
+                if (item.email === e.target.value) {
                     $message.textContent = "Esta dirección de correo ya está registrada"
                     $emailField.appendChild($message)
                 }
@@ -43,7 +43,7 @@
         if (xhr.status >= 200 && xhr.status < 300) {
             const data = JSON.parse(xhr.responseText)
             data.forEach((item) => {
-                if (item.email !== $emailInput.value) {
+                if (item.email !== e.target.value) {
                     if ($emailField.contains($message)) {
                         $emailField.removeChild($message)
                     }
