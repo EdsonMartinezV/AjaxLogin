@@ -25,7 +25,6 @@
         }
     })
     
-    
     $emailInput.addEventListener("keyup", (e) => {
         if (xhr.readyState !== 4) return
         if (xhr.status >= 200 && xhr.status < 300) {
