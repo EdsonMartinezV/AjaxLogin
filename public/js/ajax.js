@@ -47,6 +47,7 @@
                 if (item.email !== e.target.value) {
                     if ($emailField.contains($message)) {
                         $emailField.removeChild($message)
+                        $registerButton.disabled = false
                     }
                 }
             })
