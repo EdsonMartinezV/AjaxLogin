@@ -1,4 +1,4 @@
-(() => {
+/* (() => {
     const xhr = new XMLHttpRequest(),
         $xhr = document.getElementById('xhr'),
         $emailInput = document.getElementById('emailInput'),
@@ -6,7 +6,7 @@
         $registerButton = document.getElementById('registerButton'),
         $fragment = document.createDocumentFragment(),
         $message = document.createElement('p');
-
+    
     $message.style.color = 'red'
 
     xhr.addEventListener("readystatechange", (e) => {
@@ -56,4 +56,32 @@
 
     xhr.open("GET", "/users")
     xhr.send();
+})(); */
+
+(() => {
+    const $fetch = document.getElementById("fetch"),
+        $registerButton = document.getElementById("registerButton"),
+        $fragment = document.createDocumentFragment()
+
+    fetch('/users')
+        .then((res) => res.ok ? res.json() : Promise.reject(res))
+        .then((json) => {
+            console.log(json)
+            json.forEach((user) => {
+                const $li = document.createElement('li')
+                const $button = document.createElement('button')
+                $button.textContent = "Eliminar"
+                $li.textContent = user.email
+                $fragment.appendChild($li)
+                $fragment.appendChild($button)
+            })
+            $fetch.appendChild($fragment)
+        })
+        .catch((err) => {
+            console.error("This is the error:", err)
+            $fetch.innerHTML = `Error ${err.status}: ${err.statusText}`
+        })
+        .finally(() => {
+            console.log('Terminamos')
+        })
 })();

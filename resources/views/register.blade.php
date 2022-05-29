@@ -22,7 +22,7 @@
         </form>
     </main><br>
     <h2>Direcciones ya registradas recuperadas con Ajax</h2>
-    <ol id="xhr"></ol>
+    <ol id="fetch"></ol>
     <script src="{{ asset("js/ajax.js") }}"></script>
 </body>
 </html>
